@@ -2,7 +2,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+import java.io.File;    
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -107,6 +107,11 @@ public class Graficabank extends JFrame{
             new deposito();
         }
     public static void main(String[] args) {
+    
+    //String pathCartellaName = "/Banking-Project-main";
+    File cartella = new File("File Utenti");
+    if(!cartella.isDirectory())
+        cartella.mkdir();     
 
     new Graficabank();
 
